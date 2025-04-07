@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FieldgaurdApplication {
+public class FieldguardApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FieldgaurdApplication.class, args);
+		SpringApplication.run(FieldguardApplication.class, args);
 	}
 
 }

@@ -8,7 +8,7 @@ import org.springframework.modulith.docs.Documenter;
 @SpringBootTest
 class SpringModulithTests {
 
-	ApplicationModules modules = ApplicationModules.of(FieldgaurdApplication.class);
+	ApplicationModules modules = ApplicationModules.of(FieldguardApplication.class);
 
 	@Test
 	void shouldBeCompliant() {
