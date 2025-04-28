@@ -29,6 +29,7 @@ public class OfficerService {
         officer.setName(dto.getName());
         officer.setEmail(dto.getEmail());
         officer.setRole(dto.getRole());
+        officer.setSubTaluk(dto.getSubTaluk());
         officer.setTaluk(dto.getTaluk());
         officer.setDistrict(dto.getDistrict());
         officer.setState(dto.getState());

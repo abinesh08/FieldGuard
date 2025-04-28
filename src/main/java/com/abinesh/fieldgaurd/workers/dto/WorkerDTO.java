@@ -23,6 +23,7 @@ public class WorkerDTO {
     private String state;
     private String district;
     private String taluk;
+    private String subTaluk;
 
     private String aadharNumber;
 
