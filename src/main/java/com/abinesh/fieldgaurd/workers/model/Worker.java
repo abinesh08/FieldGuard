@@ -23,7 +23,7 @@ public class Worker {
     private LocalDate dob;
 
     private String place;
-
+    private String subTaluk;
     private String state;
     private String district;
     private String taluk;

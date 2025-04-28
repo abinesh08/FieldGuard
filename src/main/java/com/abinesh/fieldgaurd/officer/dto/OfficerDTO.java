@@ -17,6 +17,7 @@ public class OfficerDTO {
     private String email;
     private Long phoneNumber;
     private OfficerRole role;
+    private String subTaluk;
     private String taluk;
     private String district;
     private String state;

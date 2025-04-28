@@ -21,7 +21,7 @@ public class Officer {
 
     @Enumerated(EnumType.STRING)
     private OfficerRole role;
-
+    private String subTaluk;
     private String taluk;
     private String district;
     private String state;
