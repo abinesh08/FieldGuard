@@ -17,6 +17,8 @@ public class WorkerMapper {
                 .fatherName(worker.getFatherName())
                 .address(worker.getAddress())
                 .workerPhoto(worker.getWorkerPhoto())
+                .taluk(worker.getTaluk())
+                .district(worker.getDistrict())
                 .build();
     }
 
@@ -32,6 +34,8 @@ public class WorkerMapper {
                 .fatherName(dto.getFatherName())
                 .address(dto.getAddress())
                 .workerPhoto(dto.getWorkerPhoto())
+                .taluk(dto.getTaluk())
+                .district(dto.getDistrict())
                 .build();
     }
 }
