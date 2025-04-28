@@ -25,6 +25,8 @@ public class Worker {
     private String place;
 
     private String state;
+    private String district;
+    private String taluk;
 
     @Column(unique = true, nullable = false)
     private String aadharNumber;
