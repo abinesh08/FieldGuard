@@ -20,6 +20,11 @@
 - 🔐 **User Module**
   - Admin and supervisor roles
   - Login/register functionality (JWT planned)
+ 
+- 🧑‍✈️ **Officer-Based Worker Access** ✅
+  - Officers can retrieve worker lists based on their role and assigned location (Sub-Taluk, Taluk, District, or State)  
+  - Implemented using **Modulith architecture** — no direct access between modules  
+  - Communication done via **Spring Events** and shared **DTOs**
 
 ---
 
