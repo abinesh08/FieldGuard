@@ -27,7 +27,7 @@ public class WorkerDTO {
 
     private String aadharNumber;
 
-    private String phoneNumber;
+    private Long phoneNumber;
 
     private String fatherName;
 

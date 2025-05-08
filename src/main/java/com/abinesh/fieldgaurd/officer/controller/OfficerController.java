@@ -1,5 +1,7 @@
 package com.abinesh.fieldgaurd.officer.controller;
 
+import com.abinesh.fieldgaurd.event.OfficerAccessEvent;
+import com.abinesh.fieldgaurd.event.WorkerResponseEvent;
 import com.abinesh.fieldgaurd.officer.dto.OfficerDTO;
 import com.abinesh.fieldgaurd.officer.service.OfficerService;
 import lombok.RequiredArgsConstructor;
@@ -41,5 +43,8 @@ public class OfficerController {
         officerService.deleteOfficer(id);
     }
 
-
+    @PostMapping("/workers")
+    public List<WorkerResponseEvent> getWorkersByRole(@RequestBody OfficerAccessEvent accessInfo) {
+        return officerService.fetchWorkersForOfficer(accessInfo);
+    }
 }

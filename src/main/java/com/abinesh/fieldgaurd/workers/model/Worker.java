@@ -31,7 +31,7 @@ public class Worker {
     @Column(unique = true, nullable = false)
     private String aadharNumber;
 
-    private String phoneNumber;
+    private Long phoneNumber;
 
     private String fatherName;
 
