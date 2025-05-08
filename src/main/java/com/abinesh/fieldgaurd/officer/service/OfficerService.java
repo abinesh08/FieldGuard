@@ -1,10 +1,15 @@
 package com.abinesh.fieldgaurd.officer.service;
 
+
+import com.abinesh.fieldgaurd.event.OfficerAccessEvent;
+import com.abinesh.fieldgaurd.event.WorkerFetchRequest;
+import com.abinesh.fieldgaurd.event.WorkerResponseEvent;
 import com.abinesh.fieldgaurd.officer.Repository.OfficerRepository;
 import com.abinesh.fieldgaurd.officer.dto.OfficerDTO;
 import com.abinesh.fieldgaurd.officer.mapper.OfficerMapper;
 import com.abinesh.fieldgaurd.officer.model.Officer;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,6 +22,7 @@ import java.util.stream.Collectors;
 public class OfficerService {
 
     private final OfficerRepository officerRepository;
+    private final ApplicationEventPublisher publisher;
 
     public OfficerDTO addOfficer(OfficerDTO dto, MultipartFile aadharFile) throws IOException{
         Officer officer= OfficerMapper.toEntity(aadharFile, dto);
@@ -55,5 +61,11 @@ public class OfficerService {
 
     public void deleteOfficer(Long id){
         officerRepository.deleteById(id);
+    }
+
+    public List<WorkerResponseEvent> fetchWorkersForOfficer(OfficerAccessEvent info) {
+        WorkerFetchRequest request = new WorkerFetchRequest(info);
+        publisher.publishEvent(request);
+        return request.getWorkerResponses();
     }
 }
