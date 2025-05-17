@@ -32,7 +32,7 @@
 
 | Layer | Tools |
 |-------|-------|
-| Language | Java 23 |
+| Language | Java 21 |
 | Framework | Spring Boot |
 | Architecture | Java Modulith (modular monolith) |
 | Database | MySQL |
