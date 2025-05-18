@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface WorkerDocumentRepository extends JpaRepository<WorkerDocument, Long> {
     List<WorkerDocument> findByWorkerId(Long workerId);
-    Optional<WorkerDocument> findByWorkerIdAndDocumentType(Long workerId, String documentType);
+
 }
