@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class AttendanceDTO {
+    private Long id;
     private Long workerId;
     private Long markedByOfficerId;
     private LocalDate date;

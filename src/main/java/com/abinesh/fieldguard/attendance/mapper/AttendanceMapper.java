@@ -18,6 +18,7 @@ public class AttendanceMapper {
     }
     public static AttendanceDTO toDTO(Attendance attendance) {
         return AttendanceDTO.builder()
+                .id(attendance.getId())
                 .workerId(attendance.getWorkerId())
                 .markedByOfficerId(attendance.getMarkedByOfficerId())
                 .date(attendance.getDate())
