@@ -26,10 +26,10 @@
   - Implemented using **Modulith architecture** — no direct access between modules  
   - Communication done via **Spring Events** and shared **DTOs**
 
-  - 📍 **GPS and Manual Attendance**
-- Workers can mark attendance using **GPS auto-location detection**
-- Manual attendance option available for offline/remote areas
-- Supervisors can validate and manage attendance entries
+- 📍 **GPS and Manual Attendance**
+  - Workers can mark attendance using **GPS auto-location detection**
+  - Manual attendance option available for offline/remote areas
+  - Supervisors can validate and manage attendance entries
 
 ---
 
