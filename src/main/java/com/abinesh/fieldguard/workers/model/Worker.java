@@ -39,4 +39,6 @@ public class Worker {
     @Lob
     @Column(name="worker_photo", columnDefinition = "LONGBLOB")
     private byte[] workerPhoto;
+    private Double longitude;
+    private Double latitude;
 }
