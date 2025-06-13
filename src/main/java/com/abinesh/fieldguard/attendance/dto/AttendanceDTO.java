@@ -1,6 +1,6 @@
 package com.abinesh.fieldguard.attendance.dto;
 
-import com.abinesh.fieldguard.attendance.AttendanceStatus;
+import com.abinesh.fieldguard.AttendanceStatus;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -20,5 +20,7 @@ public class AttendanceDTO {
     private String taluk;
     private String district;
     private String state;
+    private Double longitude;
+    private Double latitude;
 
 }

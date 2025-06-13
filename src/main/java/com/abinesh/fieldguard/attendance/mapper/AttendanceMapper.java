@@ -14,6 +14,8 @@ public class AttendanceMapper {
                 .taluk(dto.getTaluk())
                 .district(dto.getDistrict())
                 .state(dto.getState())
+                .longitude(dto.getLongitude())
+                .latitude(dto.getLatitude())
                 .build();
     }
     public static AttendanceDTO toDTO(Attendance attendance) {
@@ -27,6 +29,8 @@ public class AttendanceMapper {
                 .taluk(attendance.getTaluk())
                 .district(attendance.getDistrict())
                 .state(attendance.getState())
+                .longitude(attendance.getLongitude())
+                .latitude(attendance.getLatitude())
                 .build();
     }
 }

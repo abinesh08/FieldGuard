@@ -1,11 +1,15 @@
 package com.abinesh.fieldguard.attendance.service;
 
-import com.abinesh.fieldguard.attendance.AttendanceStatus;
+import com.abinesh.fieldguard.AttendanceStatus;
 import com.abinesh.fieldguard.attendance.dto.AttendanceDTO;
+import com.abinesh.fieldguard.attendance.dto.GpsAttendanceDTO;
 import com.abinesh.fieldguard.attendance.mapper.AttendanceMapper;
 import com.abinesh.fieldguard.attendance.model.Attendance;
 import com.abinesh.fieldguard.attendance.repository.AttendanceRepository;
+import com.abinesh.fieldguard.event.GpsAttendanceRequestEvent;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -14,9 +18,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class AttendanceService {
     @Autowired
-    private AttendanceRepository repository;
+    private final AttendanceRepository repository;
+    private final ApplicationEventPublisher publisher;
 
     public AttendanceDTO markAttendance(AttendanceDTO dto) {
         Attendance attendance = AttendanceMapper.toEntity(dto);
@@ -67,6 +73,17 @@ public class AttendanceService {
             dtoList.add(dto);
         }
         return dtoList;
+    }
+    public void requestGpsAttendance(GpsAttendanceDTO dto){
+        GpsAttendanceRequestEvent event = new GpsAttendanceRequestEvent(
+                dto.getOfficerId(),
+                dto.getLatitude(),
+                dto.getLongitude(),
+                dto.getRadiusInKm(),
+                dto.getStatus()
+        );
+
+        publisher.publishEvent(event);
     }
 
 

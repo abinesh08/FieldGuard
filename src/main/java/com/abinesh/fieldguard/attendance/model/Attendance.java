@@ -1,6 +1,6 @@
 package com.abinesh.fieldguard.attendance.model;
 
-import com.abinesh.fieldguard.attendance.AttendanceStatus;
+import com.abinesh.fieldguard.AttendanceStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,4 +30,6 @@ public class Attendance {
     private String taluk;
     private String district;
     private String state;
+    private Double longitude;
+    private Double latitude;
 }

@@ -34,4 +34,6 @@ public class WorkerDTO {
     private String address;
     @Lob
     private byte[] workerPhoto;
+    private Double longitude;
+    private Double latitude;
 }
