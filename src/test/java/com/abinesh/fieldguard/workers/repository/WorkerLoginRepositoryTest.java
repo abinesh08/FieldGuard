@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-class WorkerRepositoryTest {
+class WorkerLoginRepositoryTest {
     @Mock
     private WorkerRepository workerRepository;
 
